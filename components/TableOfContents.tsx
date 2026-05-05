@@ -74,10 +74,10 @@ export default function TableOfContents({ html }: Props) {
   return (
     <aside
       aria-label="Table of contents"
-      className="hidden 2xl:block fixed top-32 right-6 w-60 z-30"
+      className="hidden xl:block fixed top-24 right-3 w-[180px] 2xl:w-[220px] 2xl:right-6 z-30"
     >
-      <div className="rounded-xl border border-[var(--hairline)] bg-[var(--surface)]/80 backdrop-blur-md p-4">
-        <div className="text-[10px] font-black uppercase tracking-widest text-[var(--muted)] mb-2.5 flex items-center gap-1.5">
+      <div className="rounded-xl border border-[var(--hairline)] bg-[var(--surface)]/85 backdrop-blur-md p-3 2xl:p-4 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.12)]">
+        <div className="text-[10px] font-black uppercase tracking-widest text-[var(--muted)] mb-2 flex items-center gap-1.5">
           <span className="material-symbols-outlined" style={{ fontSize: 13 }}>list</span>
           On this page
         </div>
@@ -95,7 +95,7 @@ export default function TableOfContents({ html }: Props) {
                     setActive(h.id);
                   }
                 }}
-                className={`block text-[12.5px] py-1.5 px-2 rounded-md leading-snug transition-colors border-l-2
+                className={`block text-[11.5px] 2xl:text-[12.5px] py-1.5 px-2 rounded-md leading-snug transition-colors border-l-2
                   ${active === h.id
                     ? 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)] font-semibold'
                     : 'border-transparent text-[var(--muted)] hover:text-[var(--ink)] hover:bg-[var(--surface-2)]'
